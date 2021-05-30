@@ -13,3 +13,17 @@ https://www.kaggle.com/c/histopathologic-cancer-detection
 * Dataset used For HIstopathological images of Colon and Lung Cancer:
 https://www.kaggle.com/andrewmvd/lung-and-colon-cancer-histopathological-images
 ## STEPS INVOLVED IN BUILDING THE MODEL:
+* Importing the Required Libraries and setting up the path:
+ ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Libraries.png)
+* Visualise the Cancer type of a class:
+![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/visualise.png)
+* Visualising the Data we have:
+![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Dataset_Visualisation.png)
+* Train and Validation Data split for the model:
+![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Training.png)
+* Model Building :
+![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Training_Model.png)
+* Visualising Accuracy output:
+![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Model_Validation_Visual.png)
+* Testing Aganist an Histpathology Image:
+![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Model_Testing.png)
