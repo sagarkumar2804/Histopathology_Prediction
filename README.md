@@ -12,18 +12,18 @@ https://www.kaggle.com/paultimothymooney/breast-histopathology-images
 https://www.kaggle.com/c/histopathologic-cancer-detection
 * Dataset used For HIstopathological images of Colon and Lung Cancer:
 https://www.kaggle.com/andrewmvd/lung-and-colon-cancer-histopathological-images
-## STEPS INVOLVED IN BUILDING THE MODEL:
-* Importing the Required Libraries and setting up the path:
+# STEPS INVOLVED IN BUILDING THE MODEL:
+## 1.Importing the Required Libraries and setting up the path:
  ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Libraries.png)
-* Visualise the Cancer type of a class:
+## 2.Visualise the Cancer type of a class:
 ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/visualise.png)
-* Visualising the Data we have:
+## 3.Visualising the Data we have:
 ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Dataset_Visualisation.png)
-* Train and Validation Data split for the model:
+## 4.Train and Validation Data split for the model:
 ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Training.png)
-* Model Building :
+## 5.Model Building :
 ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Training_Model.png)
-* Visualising Accuracy output:
+## 6.Visualising Accuracy output:
 ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Model_Validation_Visual.png)
-* Testing Aganist an Histpathology Image:
+## 7.Testing Aganist an Histpathology Image:
 ![alt text](https://github.com/sagarkumar2804/Histopathology_Prediction/blob/main/Model_Testing.png)
