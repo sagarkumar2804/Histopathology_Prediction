@@ -30,7 +30,7 @@ st.write("""
 
 st.write("This is a simple image classification web app to predict the class of cancer that Histopathology image belongs to")
 
-file = st.file_uploader("Please upload an image file", type=["jpg","png","jpeg"])
+file = st.file_uploader("Please upload an image file", type=["jpeg"])
 
 if file is None:
     st.text("You haven't uploaded any image file")
