@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
-from PIL import Image
+from PIL import Image, ImageOps
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -36,13 +36,19 @@ if file is None:
     st.text("You haven't uploaded any image file")
 else:
     imageI = Image.open(file)
-    img = keras.preprocessing.image.load_img(
-    imageI, target_size=(180, 180)
-    )
-    img_array = keras.preprocessing.image.img_to_array(img)
-    img_array = tf.expand_dims(img_array, 0) # Create a batch
+#     img = keras.preprocessing.image.load_img(
+#     imageI, target_size=(180, 180)
+#     )
+#     img_array = keras.preprocessing.image.img_to_array(img)
+#     img_array = tf.expand_dims(img_array, 0) # Create a batch
+    image = ImageOps.fit(image_data, (180,180),Image.ANTIALIAS)
+    image = image.convert('RGB')
+    image = np.asarray(image)
+    st.image(image, channels='RGB')
+    image = (image.astype(np.float32) / 255.0)
+    img_reshape = image[np.newaxis,...]
 
-    predictions = model.predict(img_array)
+    predictions = model.predict(img_reshape)
     score = tf.nn.softmax(predictions[0])
     # prediction = import_and_predict(imageI, model)
     # pred = prediction[0][0]
