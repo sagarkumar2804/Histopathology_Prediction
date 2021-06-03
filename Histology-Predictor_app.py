@@ -41,7 +41,7 @@ else:
 #     )
 #     img_array = keras.preprocessing.image.img_to_array(img)
 #     img_array = tf.expand_dims(img_array, 0) # Create a batch
-    image = ImageOps.fit(image_data, (180,180),Image.ANTIALIAS)
+    image = ImageOps.fit(imageI, (180,180),Image.ANTIALIAS)
     image = image.convert('RGB')
     image = np.asarray(image)
     st.image(image, channels='RGB')
