@@ -21,7 +21,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 #     prediction = model.predict(img_reshape)
 #     return prediction
 
-model = tf.keras.models.load_model('model/Histo_Predictor.h5')
+model = tf.keras.models.load_model('Histo_Predictor.h5')
 
 st.write("""
          # ***Histopathology Image Prediction***
