@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
-import PIL
+import PIL as p
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -35,7 +35,7 @@ file = st.file_uploader("Please upload an image file", type=["jpg","png","jpeg"]
 if file is None:
     st.text("You haven't uploaded any image file")
 else:
-    imageI = Image.open(file)
+    imageI = p.Image.open(file)
     img = keras.preprocessing.image.load_img(
     imageI, target_size=(180, 180)
     )
