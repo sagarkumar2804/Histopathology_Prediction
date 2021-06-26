@@ -3,7 +3,6 @@ import tensorflow as tf
 from tensorflow import keras
 from PIL import Image, ImageOps
 import numpy as np
-import keras.utils.np_utils
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 	#test_path='/content/drive/MyDrive/dataset/test_img1.jpeg'
@@ -52,7 +51,6 @@ else:
     predictions = model.predict(img_reshape)
     score = tf.nn.softmax(predictions[0])
     # prediction = import_and_predict(imageI, model)
-    class_names=keras.np_utils.probas_to_classes(predictions)
     # pred = prediction[0][0]
     st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(score)], 100 * np.max(score)))
     #st.write(class_names[np.argmax(score)])
