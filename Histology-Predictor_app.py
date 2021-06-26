@@ -51,7 +51,7 @@ else:
 
     predictions = model.predict(img_reshape)
     for i in range (0,7):
-	if predictions(i) < 0:
+	if predictions(i)<0:
 		predictions(i)=-(predictions(i))
     st.write(predictions)
     score = tf.nn.softmax(predictions[0])
