@@ -50,9 +50,9 @@ else:
     img_reshape = image[np.newaxis,...]
 
     predictions = model.predict(img_reshape)
-    for i in range (0,7):
-	if predictions[0][i]<0:
-		predictions[0][i]=-(predictions[0][i])
+    for i in predictions:
+	if i<0:
+		i=-(i)
     st.write(predictions)
     score = tf.nn.softmax(predictions[0])
     st.write(score)
