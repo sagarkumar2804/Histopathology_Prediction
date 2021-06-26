@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow import keras
 from PIL import Image, ImageOps
 import numpy as np
+import keras.utils.np_utils
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 	#test_path='/content/drive/MyDrive/dataset/test_img1.jpeg'
