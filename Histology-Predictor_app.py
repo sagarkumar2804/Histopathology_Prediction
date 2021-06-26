@@ -22,7 +22,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 #     return prediction
 
 model = tf.keras.models.load_model('Cancer-Image-Classifier.h5')
-class_names=['Breast Cancer', 'Colon adenocarcinoma', 'Colon myelogenous leukemia', 'Lung Squamous cell carcinoma', 'Lung adenocarcinoma', 'Lung benign tissue', 'Ovarian Cancer']
+#class_names=['Breast Cancer', 'Colon adenocarcinoma', 'Colon myelogenous leukemia', 'Lung Squamous cell carcinoma', 'Lung adenocarcinoma', 'Lung benign tissue', 'Ovarian Cancer']
 st.write("""
          ***Histopathology Image Prediction***
          """
@@ -51,6 +51,7 @@ else:
     predictions = model.predict(img_reshape)
     score = tf.nn.softmax(predictions[0])
     # prediction = import_and_predict(imageI, model)
+    class_names=classes_and_models["model"]["classes"]
     # pred = prediction[0][0]
-    st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(model.class_names[np.argmax(score)], 100 * np.max(score)))
+    st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(score)], 100 * np.max(score)))
     #st.write(class_names[np.argmax(score)])
