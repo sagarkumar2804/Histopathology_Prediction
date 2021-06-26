@@ -49,8 +49,8 @@ else:
     img_reshape = image[np.newaxis,...]
 
     predictions = model.predict(img_reshape)
-    score = tf.nn.softmax(predictions[0])
+    score = tf.nn.softmax(predictions)
     # prediction = import_and_predict(imageI, model)
     # pred = prediction[0][0]
-    st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(predictions)], 100 * np.max(score)))
+    st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(score)], 100 * np.max(score)))
     #st.write(class_names[np.argmax(score)])
