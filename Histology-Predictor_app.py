@@ -43,7 +43,7 @@ else:
 #     img_array = keras.preprocessing.image.img_to_array(img)
 #     img_array = tf.expand_dims(img_array, 0) # Create a batch
     image = ImageOps.fit(imageI, (180,180),Image.ANTIALIAS)
-    image = image.convert('RGB')
+    #image = image.convert('RGB')
     image = np.asarray(image)
     st.image(image, channels='RGB')
     image = (image.astype(np.float32) / 255.0)
@@ -55,5 +55,5 @@ else:
     st.write(score)
     # prediction = import_and_predict(imageI, model)
     # pred = prediction[0][0]
-    st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(class_names[np.max(score)], 100 * np.max(score)))
+    st.write( "This image belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(score)], 100 * np.max(score)))
     #st.write(class_names[np.argmax(score)])
