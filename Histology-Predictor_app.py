@@ -29,6 +29,7 @@ st.write("""
          )
 
 st.write("This is a simple image classification web app to predict the class of cancer that Histopathology image belongs to")
+st.write("The Classes are: ",class_names)
 
 file = st.file_uploader("Please upload an image file", type=["jpeg"])
 
@@ -50,7 +51,7 @@ else:
 
     predictions = model.predict(img_reshape)
     st.write(predictions)
-    score = tf.nn.softmax(predictions)
+    score = tf.nn.softmax(predictions[0])
     st.write(score)
     # prediction = import_and_predict(imageI, model)
     # pred = prediction[0][0]
