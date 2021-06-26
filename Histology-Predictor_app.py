@@ -22,7 +22,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 #     return prediction
 
 model = tf.keras.models.load_model('Cancer-Image-Classifier.h5')
-#class_names=['Breast Cancer', 'Colon adenocarcinoma', 'Colon myelogenous leukemia', 'Lung Squamous cell carcinoma', 'Lung adenocarcinoma', 'Lung benign tissue', 'Ovarian Cancer']
+class_names=['Breast Cancer', 'Colon adenocarcinoma', 'Colon myelogenous leukemia', 'Lung Squamous cell carcinoma', 'Lung adenocarcinoma', 'Lung benign tissue', 'Ovarian Cancer']
 st.write("""
          ***Histopathology Image Prediction***
          """
