@@ -49,6 +49,7 @@ else:
     img_reshape = image[np.newaxis,...]
 
     predictions = model.predict(img_reshape)
+    print(predictions)
     score = tf.nn.softmax(predictions)
     # prediction = import_and_predict(imageI, model)
     # pred = prediction[0][0]
