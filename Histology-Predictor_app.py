@@ -51,7 +51,7 @@ else:
 
     predictions = model.predict(img_reshape)
     st.write(predictions)
-    score = tf.nn.softmax(predictions)
+    score = tf.nn.softmax(predictions[0])
     st.write(score)
     # prediction = import_and_predict(imageI, model)
     # pred = prediction[0][0]
